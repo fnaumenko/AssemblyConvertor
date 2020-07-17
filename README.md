@@ -21,7 +21,7 @@ EMBL_test.pl chrom start_pos end_pos [direct] [printTime] [printRegion]
 ## Challenge description
 The main drawback of this implementation is the need to load the resulting sequence from the database on the client side in order to search for the source region. 
 This can be a time-consuming operation (up to 2 minutes, depending on the chromosome and server load).<br>
-To reduce the latency, the following technique was applied: a subsequence is requested from the database 
+To reduce the latency, the following technique was applied: a target subsequence is requested from the database 
 with coordinates equal to the coordinates of the source region extended by DELTA, 
 where DELTA is the difference in the length of the source and target chromosomes (i.e., chromosomes from different assemblies). 
 The technique is based on the assumption that assemblies differ from each other by only a few inserts.<br>
