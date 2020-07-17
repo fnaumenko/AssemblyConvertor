@@ -1,17 +1,17 @@
-# bioStat
+# Assembly Convertor
 **EMBL_test.pl** is a script that converts region coordinates from GRCh38 to GRCh37 (or opposite) assemblies, using Ensempl Perl API.<br>
 This is a test exercise.<br>
 
 ## Usage
 `EMBL_test.pl chrom start_pos end_pos direct [printTime] [printRegion]`<br>
-'chrom'	: chromosome to convert, e.g. 10, X
-'start_pos'	: source region start position
-'end_pos'	: source region end position
-'direct'	: direction of conversion: if 0 then GRCh38-> GRCh37, if 1 then the opposite 
+`chrom`	: chromosome to convert, e.g. 10, X
+`start_pos`	: source region start position
+`end_pos`	: source region end position
+`direct`	: direction of conversion: if 0 then GRCh38-> GRCh37, if 1 then the opposite 
 default value	: 0 (false)
-'printTime'	: if true then print elapsed time after each potentially time-consuming operation and total
+`printTime`	: if true then print elapsed time after each potentially time-consuming operation and total
 default value	: 0 (false)
-"printRegion'	: if true then print source and target regions
+`printRegion`	: if true then print source and target regions
 default value	: 0 (false)
 
 `biostat <command> [options] [<file>…]`<br>
@@ -22,7 +22,8 @@ In the second case, the output to the terminal is carried out immediately, which
 ## Synopsis
 `perl EMBL_test.pl Y 5000000 5000100`
 `perl EMBL_test.pl 1 3000000 3005000 1 1`
-<br><br>
+
+## Brief challenge description
 The main drawback of this implementation is the need to load the resulting sequence from the database on the client side in order to search for the source region.
  This can be a time-consuming operation (up to 2 minutes, depending on the chromosome and server load).<br>
 To reduce the latency, the following technique was applied: a subsequence is requested from the database 
