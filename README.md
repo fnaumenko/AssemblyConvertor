@@ -6,13 +6,12 @@ This is a test exercise.<br>
 ```
 EMBL_test.pl chrom start_pos end_pos [direct] [printTime] [printRegion]
 
-	chrom     : chromosome to convert, e.g. 10, X<br>
-	start_pos : source region start position<br>
-	end_pos   : source region end position<br>
-	direct    : direction of conversion: if 0 then GRCh38->GRCh37, if 1 then the opposite; *default value:* 0 (false)<br>
-	printTime : if true then print elapsed time after each potentially time-consuming operation and total; 
-*default value:* 0 (false)<br>
-	printRegion	: if true then print source and target regions; *default value:* 0 (false)<br>
+  chrom      : chromosome to convert, e.g. 10, X
+  start_pos  : source region start position
+  end_pos    : source region end position
+  direct     : direction of conversion: if 0 then GRCh38->GRCh37, if 1 then the opposite; default value: 0 (false)
+  printTime  : if true then print elapsed time after each potentially time-consuming operation and total; default value: 0 (false)
+  printRegion: if true then print source and target regions; default value: 0 (false)
 ```
 
 ## Synopsis
